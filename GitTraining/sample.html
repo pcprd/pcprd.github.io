@@ -44,20 +44,13 @@
 <script src="../js/marked.min.js"></script>
 <script>
 
-  var mdfile = [];
-  var content = "";
+  var mdfile = "";
 
   $.get("https://pcprd.github.io/README.md", function(data) {
     console.log(data);
     console.log(marked(data));
-    mdfile = data.split('\n');
+    $("#main-content").html(marked(data));
   });
-
-  mdfile.each(mdfile, function(r){
-    content += marked(r);
-  });
-
-  $("#main-content").html(marked(content));
 </script>
 
 </body>
