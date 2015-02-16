@@ -46,7 +46,8 @@
 
   var mdfile = "## サンプル";
 
-  $.get("http://pcprd.github.io/README.md", function(data) {
+  $.get("https://pcprd.github.io/README.md", function(data) {
+    console.log(data);
     mdfile = data;
   });
 
